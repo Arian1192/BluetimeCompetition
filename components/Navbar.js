@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
             <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
                 <Link href='/'>
-                    <Image src='/bluetimeLogo.png' width={250} height={150} alt="Bluetime Competition Logo" className='sm:mr-60' />
+                    <Image src='/bluetimeLogo.png' width={200} height={200} alt="Bluetime Competition Logo" className='sm:mr-60' />
                 </Link>
                 <ul className='hidden sm:flex '>
                     {NavbarSections.map((section, index) => (
