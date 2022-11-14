@@ -19,11 +19,11 @@ html{
   }
 
   *::-webkit-scrollbar-track {
-    background: darkgrey;
+    background: #ffffff;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #0084ff;
+    background-color: #0369A1;
   }
 
 .custom-img{
