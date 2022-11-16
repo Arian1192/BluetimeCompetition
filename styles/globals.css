@@ -35,3 +35,16 @@ html{
 
   /* background-image: url(https://images.unsplash.com/photo-1559302966-3037b93a7225?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80) */
 }
+
+.custom-img2{
+  background-image: url(https://images.unsplash.com/photo-1543747255-94b72995ac74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+}
+
+/* se muestra el mapa en el scroll con el navbar abierto
+ */
+
+.map{
+  width: 80%;
+  height: 200px;
+  z-index: 11;
+}

@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Hero from '../components/Hero'
 import InstaGrid from '../components/InstaGrid'
+import dynamic from 'next/dynamic'
 const token = process.env.NEXT_PUBLIC_OAUTHTOKEN
 const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&access_token=${token}`
+
+
+
 
 export default function Home({ data }) {
   return (
