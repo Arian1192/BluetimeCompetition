@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
             <div className='bg-zinc-300 w-full p-8 flex flex-col items-center justify-center gap-5 border-t-1 border-black max-sm: text-sm'>
                 <p>
-                    Made with ⚙️ by Arian
+                    Made with ❤️ by Arian
                 </p>
                 <p>
                     © 2022 Todos los derechos reservados.

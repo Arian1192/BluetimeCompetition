@@ -48,7 +48,7 @@ const FormContact = () => {
                                     className='py-1 px-4 block w-full shadow-sm text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500'
                                     {...register('name', { required: true })}
                                 />
-                                {errors.name && <span className='text-red-700 text-sm'>⚠️ Este Campo es Obligatorio</span>}
+                                {errors.name && <span className='text-red-700 text-sm'>🛑 Este Campo es Obligatorio</span>}
                             </div>
                         </div>
                         <div>
@@ -64,7 +64,7 @@ const FormContact = () => {
                                     className='py-1 px-4 block w-full shadow-sm text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500'
                                     {...register('email', { required: true, pattern: "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" })}
                                 />
-                                {errors.email && <span className='text-red-700 text-sm'>⚠️ Este Campo es Obligatorio</span>}
+                                {errors.email && <span className='text-red-700 text-sm'>🛑 Este Campo es Obligatorio</span>}
                             </div>
                         </div>
                         <div>
@@ -81,7 +81,7 @@ const FormContact = () => {
                                     aria-describedby='phone-description'
                                     {...register('phone', { required: true })}
                                 />
-                                {errors.phone && <span className='text-red-700 text-sm'>⚠️ Este Campo es Obligatorio</span>}
+                                {errors.phone && <span className='text-red-700 text-sm'>🛑 Este Campo es Obligatorio</span>}
                             </div>
                         </div>
                         <div className='sm: col-span-2'>
@@ -105,7 +105,7 @@ const FormContact = () => {
                                     rows={4}
                                     {...register('help', { required: true })}
                                 />
-                                {errors.help && <span className='text-red-700 text-sm'>⚠️ Este Campo es Obligatorio</span>}
+                                {errors.help && <span className='text-red-700 text-sm'>🛑 Este Campo es Obligatorio</span>}
                             </div>
                         </div>
                         <div className='text-right sm:col-span-2'>

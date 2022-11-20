@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Hero from '../components/Hero'
 import InstaGrid from '../components/InstaGrid'
 import dynamic from 'next/dynamic'
+import CardService from '../components/CardService'
+
 const token = process.env.NEXT_PUBLIC_OAUTHTOKEN
 const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&access_token=${token}`
 
@@ -21,7 +23,36 @@ export default function Home({ data }) {
         <Hero heading1='PORSCHE' heading2='' heading3='SPECIALIST' message='We care about your car, and we deal to make your dreams come true' />
       </div>
       {/* <About /> */}
-      <InstaGrid data={data} />
+
+      <div id='about' className='pt-20'>
+        <h2 className='flex items-center justify-center text-3xl font-extrabold mt-10 text-slate-700 text-center max-sm:text-lg'>¿ QUE ES BLUETIME - COMPETITION ?</h2>
+        <div className='flex flex-col items-center justify-center mt-10 p-4 text-center'>
+          <p className='text-slate-500 text-xl max-sm:text-base  '>Bluetime Competition cambia el paradigma actual que tenemos sobre un taller mecanico.</p>
+          <p className='text-slate-500 text-xl w-2/3 text-center max-sm:text-base '>
+            Nuestra filosofia es que TU como cliente, puedas estar completamente tranquilo de que tu coche esta en las manos correctas.
+          </p>
+          <br />
+          <p className='text-slate-500 text-xl w-2/3 text-center max-sm:text-base '>
+            Nuestro equipo esta formado por profesionales con una amplia experiencia en el mundo del automovil y mas concretamente en el sector de la competicion, por lo que el cuidado y cariño por los detalles van a ser un MUST para nosotros.
+          </p>
+          <br />
+          <p className='text-slate-500 text-xl w-2/3 text-center max-sm:text-base '>
+            Mas abajo podras ver algunos de los trabajos que hemos realizado en el pasado, y ademas te invitamos a que nos sigas en nuestra cuenta de instagram.
+          </p>
+          <p className='text-slate-500 text-xl w-2/3 text-center'>
+
+          </p>
+        </div>
+        <InstaGrid data={data} />
+      </div>
+      <div id='services'>
+
+        <div className='w-full  flex flex-col text-4xl items-center justify-center '>
+          <h2 className=' mt-40 text-slate-500 p-3 '>Services</h2>
+          <p className='m-10 text-slate-700 p-10 text-base text-center'>Estos son algunos de los SERVICIOS que proporcionamos, pero si tienes algun tipo de dudas, no dudes en contactar con nosotros</p>
+            <CardService />
+        </div>
+      </div>
     </>
   )
 }

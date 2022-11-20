@@ -52,17 +52,11 @@ const Navbar = () => {
             <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
                 <Link href='/'>
                     <Image src='/bluetimeLogo.png' width={200} height={200} alt="Bluetime Competition Logo" className='sm:mr-60' />
-                    {/* <div className='flex flex-col items-center justify-center'>
-                        <h2 className='text-1xl font-bold tracking-wider max-sm:text-3xl' translate='no'>BLUETIME</h2>
-                        <div className='md:w-[8rem] h-1 bg-sky-700 mt-1 mb-1 max-sm:w-[18rem]'></div>
-                        <h2 className='text-1xl font-bold tracking-widest max-sm:text-3xl' translate='no'>COMPETITION</h2>
-                    </div> */}
                 </Link>
                 <ul style={{ color: `${textcolor}` }} className='hidden sm:flex  '>
                     {NavbarSections.map((section, index) => (
                         <li key={index} className='p-4 font-bold hover:text-sky-700'>
                             <a href={section.path} translate='no'>
-                                {/* <Link href={` `+section.path} >{section.title}</Link> */}
                                 {section.title}
                             </a>
                         </li>
