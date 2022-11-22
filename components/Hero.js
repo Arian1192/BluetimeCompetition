@@ -11,7 +11,7 @@ const Hero = ({ message, heading1, heading2, heading3 }) => {
                 <div className='md:w-[28rem] h-1 bg-sky-700 mt-1 mb-1 max-sm:w-[18rem]'></div>
                 <h2 className='text-5xl font-bold tracking-widest max-sm:text-3xl' translate='no'>{heading3}</h2>
                 {/* <Image src='/bluetimeLogo.png' width={400} height={200} alt="Bluetime Competition Logo" className='items-center justify-center' /> */}
-                <p className='py-5 text-xl'>{message}</p>
+                <p className='py-5 text-xl text-center'>{message}</p>
                 <button className='px-8 py-2 border'>Contact</button>
             </div>
         </div>

@@ -49,16 +49,18 @@ const Services = [
 
 const CardService = () => {
     return (
-        <div className='max-sm:w-full mb-40 flex item-center justify-center pr-4 md:3/6 px-10 max-md:w-3/6xl:w-4/5 2xl:w-2/3 md:grid grid-cols-3 gap-10 '>
+        <div className='max-sm:w-full mb-40  md:3/6 px-10 max-md:w-3/6 xl:w-4/5 2xl:w-2/3 md:grid grid-cols-3 gap-10 place-items-center'>
             {Services.map((service) => (
                 <Hover key={service.id} speed={500}>
-                    <div key={service.id} className='max-w-sm rounded overflow-hidden font-meidum shadow-lg flex flex-col items-center text-center  gap-4 sm:mb-8 max-sm:mb-8  transition ease-in-out delay-150 bg-slate-200 hover:scale-110 hover:bg-slate-500 duration-300  hover:text-white'>
+                    <div key={service.id} className='max-w-sm h-5/6 rounded font-medium shadow-lg flex flex-col items-center text-center  gap-4 sm:mb-8 max-sm:mb-8  transition ease-in-out delay-150 bg-slate-200 hover:scale-110 hover:bg-slate-500 duration-300  hover:text-white'>
                         {/* <img src={service.image} alt={service.title} className='w-20 h-20 m-5 '/> */}
-                        <div className='w-full  bg-slate-100 flex h-40 justify-center items-center'>
+                        <div className='w-full h-64  bg-slate-100 flex justify-center items-center'>
                             Imagen
                         </div>
-                        <h3 className='text-lg text-center p-2'>{service.title}</h3>
-                        <p className='p-5 text-base'>{service.description}</p>
+                        <div className='w-full h-64 flex flex-col items-center justify-center'>
+                            <h3 className='text-lg text-center p-2 font-bold text-slate-700'>{service.title}</h3>
+                            <p className='p-5 text-base'>{service.description}</p>
+                        </div>
                     </div>
                 </Hover>
             ))}

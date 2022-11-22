@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 
-                                                                                                                                
+
 const NavbarSections = [
     {
         title: 'Home',
@@ -48,11 +48,13 @@ const Navbar = () => {
 
 
     return (
-        <div style={{ backgroundColor: `${color}` }} className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
+        <div style={{ backgroundColor: `${color}` }} className='fixed left-0 top-0 w-full z-10 ease-in duration-200'>
             <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
-                <Link href='/'>
-                    <Image src='/bluetimeLogo.png' width={200} height={200} alt="Bluetime Competition Logo" className='sm:mr-60' />
-                </Link>
+                <div className='flex items-center h-11'>
+                    <Link href='/'>
+                        <Image src='/bluetimeLogo3.png' width={200} height={150} alt="Bluetime Competition Logo" className='sm:mr-60' />
+                    </Link>
+                </div>
                 <ul style={{ color: `${textcolor}` }} className='hidden sm:flex  '>
                     {NavbarSections.map((section, index) => (
                         <li key={index} className='p-4 font-bold hover:text-sky-700'>
@@ -72,9 +74,8 @@ const Navbar = () => {
                     : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-blue-900 text-center ease-in duration-300'}>
                     <ul>
                         {NavbarSections.map((section, index) => (
-                            <li key={index} className='p-4 text-4xl hover:text-gray-600' onClick={()=> handleNav()}>
+                            <li key={index} className='p-4 text-4xl hover:text-gray-600' onClick={() => handleNav()}>
                                 <a href={section.path}>
-                                    {/* <Link href={` `+section.path} >{section.title}</Link> */}
                                     {section.title}
                                 </a>
                             </li>
