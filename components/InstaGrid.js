@@ -1,8 +1,19 @@
 import Image from 'next/image'
 import { AiFillWindows, AiOutlineInstagram } from 'react-icons/ai'
 import Hover from 'react-3d-hover'
+import { useRouter } from 'next/router'
+import englishLanguageTranslations from '../languages/en'
+import spanishLanguageTranslations from '../languages/es'
+import frenchLanguageTranslations from '../languages/fr'
 
 export const InstaGrid = (props) => {
+    const data = props
+    const router = useRouter()
+    const { locale } = router
+    const es = spanishLanguageTranslations
+    const en = englishLanguageTranslations
+    const fr = frenchLanguageTranslations
+    const t = locale === 'es' ? es : locale === 'fr' ? fr : en
 
     const handleClick = (link) => {
         if (!link) {
@@ -25,7 +36,7 @@ export const InstaGrid = (props) => {
                             <AiOutlineInstagram size={'2rem'} className='text-slate-600' />
                         </div>
                         <div className='flex mt-3 items-center justify-center'>
-                            ¡Follow on Instagram!
+                            {t.instagramSection.title}
                         </div>
                     </div>
                 <div className='rounded mt-5px-8 py-8 mx-auto items-center  lg:w-3/6 lg:h-1/4 sm:w-full md:w-2/3 xl:w-1/3 max-sm:w-4/5 '>
@@ -34,22 +45,22 @@ export const InstaGrid = (props) => {
 
                         <div className='col-span-2' onClick={() => handleClick(props.data.data[0].permalink)}>
                             <img
-                                src={props.data.data[0].media_url}
-                                alt={props.data.data[0].caption}
+                                src={data.data.data[0].media_url}
+                                alt={data.data.data[0].caption}
                                 className='inset-0 h-full object-cover object-center rounded opacity-75 hover:opacity-100 cursor-pointer'
                             />
                         </div>
 
                         <div className='col-span-2' onClick={() => handleClick(props.data.data[1].permalink)}>
                             <img
-                                src={props.data.data[1].media_url}
-                                alt={props.data.data[1].caption}
+                                src={data.data.data[1].media_url}
+                                alt={data.data.data[1].caption}
                                 className='inset-0 h-full w-full object-cover  object-center rounded opacity-75 hover:opacity-100  cursor-pointer' />
                         </div>
                         <div className='col-span-2' onClick={() => handleClick(props.data.data[2].permalink)}>
                             <img
-                                src={props.data.data[2].media_url}
-                                alt={props.data.data[2].caption}
+                                src={data.data.data[2].media_url}
+                                alt={data.data.data[2].caption}
                                 className='inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 cursor-pointer ' />
                         </div>
                         <div className='col-span-2' onClick={() => handleClick(props.data.data[3].permalink)}>

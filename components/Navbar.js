@@ -2,32 +2,42 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import {useRouter} from 'next/router'
+import englishLanguageTranslations from '../languages/en'
+import spanishLanguageTranslations from '../languages/es'
+import frenchLanguageTranslations from '../languages/fr'
 
 
 
-const NavbarSections = [
-    {
-        title: 'Home',
-        path: '/#',
-    },
-    {
-        title: 'About us',
-        path: '/#about',
-    },
-    {
-        title: 'Services',
-        path: '/#services',
-    },
-    {
-        title: 'Contact us',
-        path: '/contact',
-    },
-]
 
 const Navbar = () => {
+    const router = useRouter()
+    const { locale, locales, asPath } = router
+    const es = spanishLanguageTranslations
+    const en = englishLanguageTranslations
+    const fr = frenchLanguageTranslations
+    const t = locale === 'es' ? es : locale === 'fr' ? fr : en
     const [nav, setNav] = useState(false)
     const [color, setColor] = useState('transparent')
     const [textcolor, setTextColor] = useState('white')
+    const NavbarSections = [
+        {
+            title: `${t.navbar.home}`,
+            path: '/#',
+        },
+        {
+            title: `${t.navbar.about}`,
+            path: '/#about',
+        },
+        {
+            title: `${t.navbar.services}`,
+            path: '/#services',
+        },
+        {
+            title: `${t.navbar.contact}`,
+            path: '/contact',
+        },
+    ]
 
     const handleNav = () => {
         setNav(!nav)
