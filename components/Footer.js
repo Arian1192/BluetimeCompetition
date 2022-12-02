@@ -7,10 +7,13 @@ const Footer = () => {
     return (
         <div>
             <div className='bg-sky-900 flex  w-full p-8 max-sm:flex-col' >
-                <div className='w-full border flex items-center justify-center align-middle'>
-                    <h2>
-                        Footer
-                    </h2>
+                <div className='w-full border flex flex-col items-center justify-center align-middle '>
+                    <p className='text-white font-medium'>
+                        Bluetime Competition Sl
+                    </p>
+                    <p className='text-white font-medium'>
+                        Bxxxxxxx
+                    </p>
                 </div>
                 <div className='w-full justify-between p-4 z-11 lg:text-lg  sm:gap-5 sm:text-[12px] max-sm:text-sm'>
                     <div className='lg:w-full md:w-full flex text-white font-normal justify-center max-sm:w-full'>
@@ -22,6 +25,7 @@ const Footer = () => {
                                     <p>Telf:</p>
                                     <p> 678859463</p>
                                 </div>
+                                <a href='https://www.google.com/maps/dir//bluetimecompetition/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x12a49d215847ae17:0x9e3d7909a3c2a009?sa=X&ved=2ahUKEwiv0fPUvtb7AhW3YKQEHUy5A3UQ9Rd6BAgsEAQ' target='_blank' rel='noopener noreferrer' className='text-white text-xl font-bold mt-3'>Como llegar ?</a>
                             </div>
                             <div className='w-full flex items-center max-sm:z-[1] justify-center'>
                                 <Map />

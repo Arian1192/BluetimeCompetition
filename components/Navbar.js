@@ -6,6 +6,7 @@ import {useRouter} from 'next/router'
 import englishLanguageTranslations from '../languages/en'
 import spanishLanguageTranslations from '../languages/es'
 import frenchLanguageTranslations from '../languages/fr'
+import LanguageSelector from './languageSelector'
 
 
 
@@ -74,14 +75,15 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+                <LanguageSelector />
                 {/*Mobile Button*/}
                 <div className='block sm:hidden z-10' onClick={() => handleNav()}>
                     {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} style={{ color: `${textcolor}` }} />}
                 </div>
                 {/*Mobile Menu*/}
                 <div className={nav
-                    ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-blue-900 text-center ease-in duration-300'
-                    : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-blue-900 text-center ease-in duration-300'}>
+                    ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-blue-900 text-center ease-in duration-300 '
+                    : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-blue-900 text-center ease-in duration-300 '}>
                     <ul>
                         {NavbarSections.map((section, index) => (
                             <li key={index} className='p-4 text-4xl hover:text-gray-600' onClick={() => handleNav()}>
@@ -92,6 +94,7 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
+                
 
             </div>
         </div>

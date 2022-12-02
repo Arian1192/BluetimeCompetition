@@ -1,11 +1,10 @@
 import React from 'react'
+import CardService from '../components/CardService'
 
-const services = () => {
+export default function services(){
     return (
-        <div>
-            Este es el apartado de services.
-        </div>
+        <>
+            <CardService/> 
+        </>
     )
 }
-
-export default services
