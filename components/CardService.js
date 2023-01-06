@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import Hover from 'react-3d-hover'
 import englishLanguageTranslations from "../languages/en"
 import spanishLanguageTranslations from "../languages/es"
@@ -83,36 +83,36 @@ const CardService = () => {
 
 
     return (
-        <motion.div ref={ref} 
-        className='max-sm:w-full just-self-center mb-40 container md:3/6 px-10 max-md:w-3/6 xl:w-4/5 2xl:w-2/3 md:grid grid-cols-3 grid-flow-row gap-5' 
-        variants={container} 
-        initial="hidden" 
-        animate="visible">
+        <motion.div ref={ref}
+            className='max-sm:w-full mb-40 container md:3/6 px-10 max-md:w-3/6 xl:w-4/5 2xl:w-2/3  gap-5 flex flex-row flex-wrap justify-around items-start'
+            variants={container}
+            initial="hidden"
+            animate="visible">
             {Services.map((service, index) => (
                 <Hover key={service.id} speed={500}>
-                    <motion.div 
-                        variants={item} 
-                        whileInView={{ opacity:1}} 
-                        initial={{opacity: 0}} 
-                        viewport={{once:true}} 
+                    <motion.div
+                        variants={item}
+                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
                         key={service.id}
                         className='max-w-sm rounded font-medium shadow-lg flex flex-col items-center text-center gap-4
                         sm:mb-8 max-sm:mb-8 md:mb-8 transition ease-in-out delay-150 bg-slate-200 hover:scale-110 hover:bg-slate-500 duration-300  hover:text-white'>
-                        <div 
+                        <div
                             className='w-full  bg-slate-100 flex justify-center items-center'>
-                            {service.image === null ? 
-                                <p className='text-2xl font-bold text-slate-500'>Coming Soon</p> : 
-                                <img src={service.image} alt={service.title} className='object-cover w-full h-60 '/>}
+                            {service.image === null ?
+                                <p className='text-2xl font-bold text-slate-500'>Coming Soon</p> :
+                                <img src={service.image} alt={service.title} className='object-cover w-full h-60 ' />}
                         </div>
-                        <div 
+                        <div
                             className='w-full h-72 flex flex-col items-center justify-center'>
-                            <h3 
+                            <h3
                                 className='text-lg text-center p-2 font-bold text-slate-700 max-md:text-md'>
-                                    {service.title}
+                                {service.title}
                             </h3>
-                            <p 
+                            <p
                                 className='p-5 text-base md:text-xs lg:text-base'>
-                                    {service.description}
+                                {service.description}
                             </p>
                         </div>
                     </motion.div>
