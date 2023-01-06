@@ -15,7 +15,7 @@ import Services from './services'
 import { LanguageContext } from '../Context/LanguageContext'
 
 const token = process.env.NEXT_PUBLIC_OAUTHTOKEN
-const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&access_token=${token}`
+// const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&access_token=${token}`
 
 const DynamicSlider = dynamic(() => import('../components/Slider'), { ssr: false })
 
@@ -40,7 +40,7 @@ export default function Home({ data }) {
         <About />
         <div>
         </div>
-        <InstaGrid data={data} />
+        {/* <InstaGrid data={data} /> */}
       </div>
       <div id='services'>
         <div className='w-full  flex flex-col text-4xl items-center justify-center '>
@@ -54,20 +54,20 @@ export default function Home({ data }) {
   )
 }
 
-export async function getStaticProps() {
-  const res = await fetch(url)
-  const data = await res.json()
+// export async function getStaticProps() {
+//   const res = await fetch(url)
+//   const data = await res.json()
 
-  if(!data) {
-    return {
-      notFound: true,
-    }
-  }
+//   if(!data) {
+//     return {
+//       notFound: true,
+//     }
+//   }
 
-  return {
-    props: {
-      data,
-    },
-    revalidate: 10,
-  }
-}
+//   return {
+//     props: {
+//       data,
+//     },
+//     revalidate: 10,
+//   }
+// }
