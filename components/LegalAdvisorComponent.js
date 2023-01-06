@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import { Fragment } from 'react'
-import englishLanguageTranslations from '../languages/en'
-import spanishLanguageTranslations from '../languages/es'
-import frenchLanguageTranslations from '../languages/fr'
+import englishLanguageTranslations from '../languages/en.json'
+import spanishLanguageTranslations from '../languages/es.json'
+import frenchLanguageTranslations from '../languages/fr.json'
 import LanguageSelector from './languageSelector'
 
 const LegalAdvisorComponent = () => {

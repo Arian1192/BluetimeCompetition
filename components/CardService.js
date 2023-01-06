@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import Hover from 'react-3d-hover'
-import englishLanguageTranslations from "../languages/en"
-import spanishLanguageTranslations from "../languages/es"
-import frenchLanguageTranslations from "../languages/fr"
+import englishLanguageTranslations from "../languages/en.json"
+import spanishLanguageTranslations from "../languages/es.json"
+import frenchLanguageTranslations from "../languages/fr.json"
 import { useInView, motion } from 'framer-motion'
 import { useRef } from 'react'
 import { LanguageContext } from '../Context/LanguageContext'

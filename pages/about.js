@@ -1,8 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import englishLanguageTranslations from '../languages/en'
-import spanishLanguageTranslations from '../languages/es'
-import frenchLanguageTranslations from '../languages/fr'
+import englishLanguageTranslations from '../languages/en.json'
+import spanishLanguageTranslations from '../languages/es.json'
+import frenchLanguageTranslations from '../languages/fr.json'
 
 export default function About() {
 

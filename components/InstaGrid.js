@@ -4,9 +4,9 @@ import Hover from 'react-3d-hover'
 import { useRouter } from 'next/router'
 import { useRef } from 'react'
 import { useInView, motion } from 'framer-motion'
-import englishLanguageTranslations from '../languages/en'
-import spanishLanguageTranslations from '../languages/es'
-import frenchLanguageTranslations from '../languages/fr'
+import englishLanguageTranslations from '../languages/en.json'
+import spanishLanguageTranslations from '../languages/es.json'
+import frenchLanguageTranslations from '../languages/fr.json'
 
 export const InstaGrid = (props) => {
     const data = props
@@ -45,17 +45,17 @@ export const InstaGrid = (props) => {
                                     opacity: isInView ? 1 : 0,
                                     transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s'
                                 }}>
-                                    <h2 translate='no' className='text-slate-600'>
-                                        BLUETIMECOMPETITION
-                                    </h2>
+                                <h2 translate='no' className='text-slate-600'>
+                                    BLUETIMECOMPETITION
+                                </h2>
                             </motion.div>
-                            <motion.div 
-                                className='font-bold text-lg gap-3 ' 
+                            <motion.div
+                                className='font-bold text-lg gap-3 '
                                 style={{
                                     transform: isInView ? 'none' : 'translateX(200px)',
                                     opacity: isInView ? 1 : 0,
                                     transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s'
-                            }}>
+                                }}>
                                 <AiOutlineInstagram size={'2rem'} className='text-slate-600' />
                             </motion.div>
 
