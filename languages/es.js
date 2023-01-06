@@ -47,6 +47,30 @@ const spanishLanguageTranslations = {
     cardDescriptionSeven: {
         description: 'Tambien ofrecemos un servicio de restauracion intregal para tu vehiculo, Te devolveremos el coche que una vez fue y que con el paso del tiempo fue perdiendo su esencia.',
     },
+
+    legalAdvisor: {
+        p1: 'Aviso Legal',
+        p2: 'Este sitio web www.bluetimecompetition.es es propiedad de Anthony. El acceso y uso del Sitio están sujetos a las siguientes condiciones de uso y a todas las leyes y regulaciones aplicables. ',
+        p3: 'Al acceder y utilizar el Sitio, usted acepta cumplir con estas condiciones de uso sin limitación o calificación. Si no está de acuerdo con estas condiciones de uso, no debe acceder ni utilizar el Sitio.',
+        p4: 'El Propietario se reserva el derecho de modificar estas condiciones de uso en cualquier momento y sin previo aviso. Es su responsabilidad revisar periódicamente estas condiciones de uso para estar al tanto de cualquier cambio. El uso continuado del Sitio después de la publicación de cualquier modificación a estas condiciones de uso constituye su aceptación de dichas modificaciones.',
+        p5: 'El contenido del Sitio, incluyendo texto, gráficos, imágenes, logotipos, iconos de botones, software y demás contenido, es propiedad del Propietario o de sus proveedores de contenido y está protegido por las leyes de derechos de autor y marcas registradas de Estados Unidos y otros países. El contenido del Sitio no puede ser reproducido, distribuido, modificado, publicado ni transmitido de ninguna manera sin el previo consentimiento por escrito del Propietario.',
+        p6: ' El Sitio puede contener enlaces a sitios web de terceros. Dichos enlaces se proporcionan únicamente como una conveniencia y no implican el respaldo del Propietario a dichos sitios web ni la responsabilidad por el contenido de los mismos. El Propietario no es responsable de la disponibilidad de dichos sitios web ni del contenido, publicidad, productos ni demás materiales disponibles en dichos sitios web. El Propietario no será responsable ni directa ni indirectamente por cualquier daño o pérdida ocasionada o supuestamente ocasionada por o en conexión con el uso o confianza en el contenido, bienes o servicios disponibles en dichos sitios web o a través de ellos.',
+        p7: 'El uso del Sitio está sujeto a todas las leyes y regulaciones aplicables. El Propietario no garantiza la disponibilidad y continuidad del funcionamiento del Sitio. No obstante, el Propietario llevará a cabo todas las acciones necesarias para intentar garantizar la disponibilidad y continuidad del funcionamiento del Sitio.'
+    },
+    // Contact Section
+    contactSection: {
+        title: 'Contacta con nosotros',
+        firstParagraph: 'Si tienes alguna duda o quieres contactar con nosotros, puedes hacerlo a través de este formulario o a través de nuestras redes sociales.',
+        name: 'Nombre',
+        email: 'Correo electrónico',
+        phone: 'Numero de teléfono',
+        message: 'Como podemos ayudarte?',
+        caractersNumber: 'Max 500 carácteres',
+        send: 'Enviar',
+        alert: 'Este campo es obligatorio',
+    }
+    
+
 }
 
 export default spanishLanguageTranslations

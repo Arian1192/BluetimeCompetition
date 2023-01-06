@@ -1,15 +1,26 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Footer = () => {
+
+    const handleLocation = () => {
+        window.open('https://www.google.com/maps/dir//bluetimecompetition/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x12a49d215847ae17:0x9e3d7909a3c2a009?sa=X&ved=2ahUKEwiv0fPUvtb7AhW3YKQEHUy5A3UQ9Rd6BAgsEAQ', '_blank')
+    }
+    const myWebRedirect = () => {
+        window.open('https://www.acoro.dev', '_blank')
+    }
     return (
         <div>
             <div className='bg-sky-900 flex  w-full p-8 max-sm:flex-col' >
                 <div className='w-full border flex flex-col items-center justify-center align-middle '>
                     <p className='text-white font-medium'>
                         Bluetime Competition Sl
+                    </p>
+                    <p>
+                        <Link href='/legalAdvisor'>Aviso Legal</Link>
                     </p>
                     <p className='text-white font-medium'>
                         Bxxxxxxx
@@ -25,7 +36,9 @@ const Footer = () => {
                                     <p>Telf:</p>
                                     <p> 678859463</p>
                                 </div>
-                                <a href='https://www.google.com/maps/dir//bluetimecompetition/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x12a49d215847ae17:0x9e3d7909a3c2a009?sa=X&ved=2ahUKEwiv0fPUvtb7AhW3YKQEHUy5A3UQ9Rd6BAgsEAQ' target='_blank' rel='noopener noreferrer' className='text-white text-xl font-bold mt-3'>Como llegar ?</a>
+                                <button className='text-white text-xl font-bold mt-3' onClick={() => handleLocation()}>
+                                    Como llegar?
+                                </button>
                             </div>
                             <div className='w-full flex items-center max-sm:z-[1] justify-center'>
                                 <Map />
@@ -36,9 +49,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className='bg-zinc-300 w-full p-8 flex flex-col items-center justify-center gap-5 border-t-1 border-black max-sm: text-sm'>
-                <p>
+                <a className='cursor-pointer hover:text-slate-600' onClick={() => myWebRedirect()}>
                     Made with ❤️ by Arian
-                </p>
+                </a>
                 <p>
                     © 2022 Todos los derechos reservados.
                 </p>

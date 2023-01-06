@@ -47,6 +47,32 @@ const frenchLanguageTranslations = {
     cardDescriptionSeven: {
         description: 'Nous offrons également un service complet de restauration de votre véhicule. Nous vous rendrons la voiture qui était autrefois et qui, au fil du temps, a perdu son essence.',
     },
+    legalAdvisor:
+    {
+        p1: 'Avis légal',
+        p2: "Ce site Web www.bluetimecompetition.es est la propriété de Antonhy. L'accès et l'utilisation du Site sont soumis aux conditions d'utilisation suivantes et à toutes les lois et ",
+        p3: "En accédant et en utilisant le Site, vous acceptez d'être lié par ces conditions d'utilisation sans limitation ni qualification. Si vous n'acceptez pas ces conditions d'utilisation, vous ne pouvez pas accéder ni utiliser le Site.",
+
+        p4: "Le Propriétaire se réserve le droit de modifier ces conditions d'utilisation à tout moment et sans préavis. Il est de votre responsabilité de revoir régulièrement ces conditions d'utilisation afin de prendre connaissance de tout changement. L'utilisation continue du Site après la publication de toute modification de ces conditions d'utilisation constitue votre acceptation de ces modifications.",
+
+        p5: "Le Propriétaire se réserve le droit de modifier ces conditions d'utilisation à tout moment et sans préavis. Il est de votre responsabilité de revoir régulièrement ces conditions d'utilisation afin de prendre connaissance de tout changement. L'utilisation continue du Site après la publication de toute modification de ces conditions d'utilisation constitue votre acceptation de ces modifications.",
+
+        p6: "Le Site peut contenir des liens vers des sites Web de tiers. Ces liens sont fournis uniquement à titre de commodité et n'impliquent pas l'approbation du Propriétaire de ces sites Web ni la responsabilité du contenu de ces sites. Le Propriétaire n'est pas responsable de la disponibilité de ces sites Web ni du contenu, de la publicité, des produits ni des autres matériaux disponibles sur ces sites Web. Le Propriétaire ne sera pas responsable, directement ou indirectement, de tout dommage ou perte causé ou prétendument causé par ou en relation avec l'utilisation ou la confiance dans le contenu, les biens ou les services disponibles sur ces sites Web ou à travers eux.",
+
+        p7: "L'utilisation du Site est soumise à toutes les lois et réglementations applicables. Le Propriétaire ne garantit pas la disponibilité et la continuité du fonctionnement du Site. Cependant, le Propriétaire prendra toutes les mesures nécessaires pour essayer de garantir la disponibilité et la continuité du fonctionnement du Site."
+    },
+    // Contact Section
+    contactSection: {
+        title: 'Contactez-nous',
+        firstParagraph: 'Si vous avez des questions ou si vous souhaitez nous contacter, vous pouvez le faire via ce formulaire ou via nos réseaux sociaux.',
+        name: 'Nom',
+        email: 'Email',
+        phone: 'Téléphone numéro',
+        message: 'Comment pouvons-nous vous aider ?',
+        caractersNumber: 'max 500 caractères',
+        send: 'Envoyer',
+        alert: 'Ce champ est obligatoire',
+    }
 
 }
 

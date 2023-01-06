@@ -1,12 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Hover from 'react-3d-hover'
-import { useRouter } from 'next/router'
 import englishLanguageTranslations from "../languages/en"
 import spanishLanguageTranslations from "../languages/es"
 import frenchLanguageTranslations from "../languages/fr"
-import { mapTermsState } from 'git-falcon9'
 import { useInView, motion } from 'framer-motion'
 import { useRef } from 'react'
+import { LanguageContext } from '../Context/LanguageContext'
 
 
 const mappingCards = (arr) => {
@@ -29,10 +28,8 @@ const item = {
     hidden: { opacity: 0 }
 }
 
-
 const CardService = () => {
-    const router = useRouter()
-    const { locale } = router
+    const { locale } = useContext(LanguageContext)
     const es = spanishLanguageTranslations
     const en = englishLanguageTranslations
     const fr = frenchLanguageTranslations

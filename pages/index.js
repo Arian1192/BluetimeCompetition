@@ -1,3 +1,4 @@
+import React,{useContext} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Hero from '../components/Hero'
@@ -11,16 +12,15 @@ import spanishLanguageTranslations from '../languages/es'
 import frenchLanguageTranslations from '../languages/fr'
 import LanguageSelector from '../components/languageSelector'
 import Services from './services'
+import { LanguageContext } from '../Context/LanguageContext'
 
 const token = process.env.NEXT_PUBLIC_OAUTHTOKEN
 const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&access_token=${token}`
 
-const DynamicSlider = dynamic(() => import('../components/Slider'), {ssr: false})
+const DynamicSlider = dynamic(() => import('../components/Slider'), { ssr: false })
 
 export default function Home({ data }) {
-
-  const router = useRouter()
-  const { locale, locales, asPath } = router
+  const { locale } = useContext(LanguageContext)
   const es = spanishLanguageTranslations
   const en = englishLanguageTranslations
   const fr = frenchLanguageTranslations

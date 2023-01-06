@@ -1,42 +1,44 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import {useRouter} from 'next/router'
 import englishLanguageTranslations from '../languages/en'
 import spanishLanguageTranslations from '../languages/es'
 import frenchLanguageTranslations from '../languages/fr'
 import LanguageSelector from './languageSelector'
+import { LanguageContext } from '../Context/LanguageContext'
+import { useRouter } from 'next/router'
 
 
 
 
 const Navbar = () => {
     const router = useRouter()
-    const { locale, locales, asPath } = router
+    const { locale, asPath, locales } = router
     const es = spanishLanguageTranslations
     const en = englishLanguageTranslations
     const fr = frenchLanguageTranslations
     const t = locale === 'es' ? es : locale === 'fr' ? fr : en
+
     const [nav, setNav] = useState(false)
     const [color, setColor] = useState('transparent')
     const [textcolor, setTextColor] = useState('white')
     const NavbarSections = [
         {
             title: `${t.navbar.home}`,
-            path: '/#',
+            path: `/${locale}#`,
         },
         {
             title: `${t.navbar.about}`,
-            path: '/#about',
+            path: `/${locale}#about`,
         },
         {
             title: `${t.navbar.services}`,
-            path: '/#services',
+            path: `/${locale}#services`,
         },
         {
             title: `${t.navbar.contact}`,
-            path: '/contact',
+            path: `/${locale}/contact`,
         },
     ]
 
@@ -69,7 +71,7 @@ const Navbar = () => {
                 <ul style={{ color: `${textcolor}` }} className='hidden sm:flex  '>
                     {NavbarSections.map((section, index) => (
                         <li key={index} className='p-4 font-bold hover:text-sky-700'>
-                            <a href={section.path} translate='no'>
+                            <a href={`${section.path}`} translate='no'>
                                 {section.title}
                             </a>
                         </li>
@@ -87,14 +89,14 @@ const Navbar = () => {
                     <ul>
                         {NavbarSections.map((section, index) => (
                             <li key={index} className='p-4 text-4xl hover:text-gray-600' onClick={() => handleNav()}>
-                                <a href={section.path}>
+                                <a href={`/${section.path}`}>
                                     {section.title}
                                 </a>
                             </li>
                         ))}
                     </ul>
                 </div>
-                
+
 
             </div>
         </div>

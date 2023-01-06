@@ -48,7 +48,28 @@ const englishLanguageTranslations = {
     cardDescriptionSeven: {
         description: 'We also offer a full restoration service for your vehicle. We will give you back the car that once was and that with the passing of time has lost its essence.',
     },
-
+    legalAdvisor:
+    {
+        p1: 'Legal Notice',
+        p2: 'This website www.bluetimecompetition.es is owned by Anthony. Access and use of the Site are subject to the following terms of use and all applicable laws and regulations.',
+        p3: 'By accessing and using the Site, you agree to be bound by these terms of use without limitation or qualification. If you do not agree to these terms of use, you may not access or use the Site.',
+        p4: 'The Owner reserves the right to modify these terms of use at any time and without notice. It is your responsibility to periodically review these terms of use to be aware of any changes. Continued use of the Site after the posting of any modifications to these terms of use constitutes your acceptance of such modifications.',
+        p5: 'The content of the Site, including text, graphics, images, logos, button icons, software, and other content, is owned by the Owner or its content providers and is protected by copyright and trademark laws of the United States and other countries. The content of the Site may not be reproduced, distributed, modified, published, or transmitted in any way without the prior written consent of the Owner.',
+        p6: 'The Site may contain links to third-party websites. These links are provided solely as a convenience and do not imply endorsement by the Owner of these websites or responsibility for the content of such websites. The Owner is not responsible for the availability of such websites or the content, advertising, products, or other materials on or available from such websites. The Owner will not be liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use or reliance on any content, goods, or services available on or through such websites.',
+        p7: 'Use of the Site is subject to all applicable laws and regulations. The Owner does not guarantee the availability and continuity of the operation of the Site. However, the Owner will take all necessary actions to try to guarantee the availability and continuity of the operation of the Site.'
+    },
+    // Contact Section
+    contactSection: {
+        title: 'Contact us',
+        firstParagraph: 'If you have any questions or want to contact us, you can do it through this form or through our social networks.',
+        name: 'Name',
+        email: 'Email',
+        phone: 'Phone number',
+        message: 'How can we help you?',
+        caractersNumber: 'Maximum 500 caracters',
+        send: 'Send',
+        alert: 'This field is required',
+    }
 
 }
 

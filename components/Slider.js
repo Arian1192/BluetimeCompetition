@@ -88,9 +88,9 @@ const Slider = () => {
     ]
 
     return (
-        <div className='w-full overflow-hidden flex flex-col items-center justify-center'>
-            <div className='mb-10'>
-                <h2 className='text-md text-slate-700 font-bold max-sm:text-[24px] '>Trabajamos con estas marcas</h2>
+        <div className='w-full overflow-hidden flex flex-col items-center justify-center z-[1]  '>
+            <div className='mb-10 flex flex-row items-center justify-center'>
+                <h2 className='text-md text-slate-700 font-bold max-sm:text-[24px]'>Trabajamos con marcas reconocidas</h2>
             </div>
             <Carousel height={400} width={5100} yOrigin={60} yRadius={60} autoPlay>
                 <div key={1} style={style}>
@@ -114,11 +114,6 @@ const Slider = () => {
                 <div key={7} style={style}>
                     <img src='https://getlogo.net/wp-content/uploads/2021/01/cp-carrillo-logo-vector.png' alt='imagen coche' />
                 </div>
-                {/* {dataCarousel.map((item) => {
-                    <div key={item.id} style={style}>
-                        Hola
-                    </div>
-                })} */}
             </Carousel>
 
         </div>
