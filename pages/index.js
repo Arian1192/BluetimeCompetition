@@ -54,7 +54,7 @@ export default function Home({ data }) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(url)
   const data = await res.json()
 
