@@ -8,7 +8,7 @@ const Hero = ({ message, heading1, heading2, heading3 }) => {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, threshold: 0.5 })
     return (
-        <div ref={ref} className='flex items-center justify-center h-screen mb-[10rem] bg-fixed bg-center bg-cover custom-img overflow-hidden '>
+        <div ref={ref} className='flex items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img overflow-hidden '>
             {/* Overlay */}
             <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]' />
             <div className='p-5 text-white z-[2] flex flex-col items-center mt-[-8rem]'>
