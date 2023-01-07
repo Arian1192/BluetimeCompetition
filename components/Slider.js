@@ -88,9 +88,9 @@ const Slider = () => {
     ]
 
     return (
-        <div className='w-full overflow-hidden flex flex-col items-center justify-center z-[1]  '>
-            <div className='mb-10 flex flex-row items-center justify-center'>
-                <h2 className='text-md text-slate-700 font-bold max-sm:text-[24px]'>Trabajamos con marcas reconocidas</h2>
+        <div className='w-full overflow-hidden flex flex-col items-center justify-center z-[1]'>
+            <div className='mb-10 flex flex-row items-center justify-center max-sm:w-full'>
+                <h2 className='text-md text-slate-700 font-bold max-sm:text-[18px] '>Trabajamos con marcas reconocidas</h2>
             </div>
             <Carousel height={400} width={5100} yOrigin={60} yRadius={60} autoPlay>
                 <div key={1} style={style}>
