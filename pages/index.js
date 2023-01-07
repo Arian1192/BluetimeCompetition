@@ -35,10 +35,8 @@ export default function Home({ data }) {
         </Head>
         <Hero heading1='BLUETIME' heading2='' heading3='COMPETITION' message={t.firstSlogan} />
       </div>
-      <div id='about' className='pt-32 overflow-hidden'>
+      <div id='about' className=' overflow-hidden'>
         <About />
-        <div>
-        </div>
         <InstaGrid data={data} />
       </div>
       <div id='services'>
