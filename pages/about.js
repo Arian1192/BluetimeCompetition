@@ -17,7 +17,7 @@ export default function About() {
 
     return (
     <>
-            <h2 className='flex items-center justify-center text-3xl font-extrabold mt-10 text-slate-700 text-center max-sm:text-lg'>{t.about.title} ?</h2>
+            <h2 className='flex items-center justify-center text-3xl font-extrabold mt-[150px] text-slate-700 text-center max-sm:text-lg'>{t.about.title} ?</h2>
             <div className='flex flex-col items-center justify-center mt-10 p-4 text-center'>
                 <p className='text-slate-500 text-xl max-sm:text-base'><span className='font-semibold' translate='no'>Bluetime Competition</span> {t.about.firstParagraph}</p>
                 <br/>
