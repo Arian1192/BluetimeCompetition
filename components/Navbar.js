@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import englishLanguageTranslations from '../languages/en.json'
-import spanishLanguageTranslations from '../languages/es.json'
-import frenchLanguageTranslations from '../languages/fr.json'
+import englishLanguageTranslations from '../public/locales/en/common.json'
+import spanishLanguageTranslations from '../public/locales/es/common.json'
+import frenchLanguageTranslations from '../public/locales/fr/common.json'
 import LanguageSelector from './languageSelector'
 import { LanguageContext } from '../Context/LanguageContext'
 import { useRouter } from 'next/router'
@@ -19,26 +19,25 @@ const Navbar = () => {
     const en = englishLanguageTranslations
     const fr = frenchLanguageTranslations
     const t = locale === 'es' ? es : locale === 'fr' ? fr : en
-
     const [nav, setNav] = useState(false)
     const [color, setColor] = useState('transparent')
     const [textcolor, setTextColor] = useState('white')
     const NavbarSections = [
         {
             title: `${t.navbar.home}`,
-            path: `/${locale}/`,
+            path: `/`,
         },
         {
             title: `${t.navbar.about}`,
-            path: `/${locale}/#about`,
+            path: `#about`,
         },
         {
             title: `${t.navbar.services}`,
-            path: `/${locale}/#services`,
+            path: `#services`,
         },
         {
             title: `${t.navbar.contact}`,
-            path: `/${locale}/#contact`,
+            path: `/contact`,
         },
     ]
 
@@ -71,9 +70,6 @@ const Navbar = () => {
                 <ul style={{ color: `${textcolor}` }} className='hidden sm:flex  '>
                     {NavbarSections.map((section, index) => (
                         <li key={index} className='p-4 font-bold hover:text-sky-700'>
-                            {/* <a href={`${section.path}`} translate='no'>
-                                {section.title}
-                            </a> */}
                             <Link href={`${section.path}`} translate='no' >{section.title}</Link>
                         </li>
                     ))}

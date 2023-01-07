@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../styles/globals.css'
 import { LanguageProvider } from '../Provider/LanguageProvider'
+import { appWithTranslation, AppWithTranslation } from 'next-i18next'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,4 +17,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)

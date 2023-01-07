@@ -4,9 +4,9 @@ import Hover from 'react-3d-hover'
 import { useRouter } from 'next/router'
 import { useRef } from 'react'
 import { useInView, motion } from 'framer-motion'
-import englishLanguageTranslations from '../languages/en.json'
-import spanishLanguageTranslations from '../languages/es.json'
-import frenchLanguageTranslations from '../languages/fr.json'
+import englishLanguageTranslations from '../public/locales/en/common.json'
+import spanishLanguageTranslations from '../public/locales/es/common.json'
+import frenchLanguageTranslations from '../public/locales/fr/common.json'
 
 export const InstaGrid = (props) => {
     const data = props
