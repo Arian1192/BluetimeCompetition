@@ -26,7 +26,7 @@ const Navbar = () => {
     const NavbarSections = [
         {
             title: `${t.navbar.home}`,
-            path: `/${locale}/#`,
+            path: `/${locale}/`,
         },
         {
             title: `${t.navbar.about}`,
@@ -38,7 +38,7 @@ const Navbar = () => {
         },
         {
             title: `${t.navbar.contact}`,
-            path: `/${locale}/contact`,
+            path: `/${locale}/#contact`,
         },
     ]
 
