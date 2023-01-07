@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Hero from '../components/Hero'
-// import InstaGrid from '../components/InstaGrid'
+import InstaGrid from '../components/InstaGrid'
 import dynamic from 'next/dynamic'
 import About from './about'
 import { useRouter } from 'next/router'
@@ -39,7 +39,7 @@ export default function Home({ data }) {
         <About />
         <div>
         </div>
-        {/* <InstaGrid data={data} /> */}
+        <InstaGrid data={data} />
       </div>
       <div id='services'>
         <div className='w-full  flex flex-col text-4xl items-center justify-center '>
@@ -53,19 +53,19 @@ export default function Home({ data }) {
   )
 }
 
-// export async function getStaticProps() {
-//   const res = await fetch(url)
-//   const data = await res.json()
+export async function getStaticProps() {
+  const res = await fetch(url)
+  const data = await res.json()
 
-//   if(!data) {
-//     return {
-//       notFound: true,
-//     }
-//   }
+  if(!data) {
+    return {
+      notFound: true,
+    }
+  }
 
-//   return {
-//     props: {
-//       data,
-//     },
-//   }
-// }
+  return {
+    props: {
+      data,
+    },
+  }
+}
