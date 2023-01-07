@@ -26,15 +26,15 @@ const Navbar = () => {
     const NavbarSections = [
         {
             title: `${t.navbar.home}`,
-            path: `/${locale}#`,
+            path: `/${locale}/#`,
         },
         {
             title: `${t.navbar.about}`,
-            path: `/${locale}#about`,
+            path: `/${locale}/#about`,
         },
         {
             title: `${t.navbar.services}`,
-            path: `/${locale}#services`,
+            path: `/${locale}/#services`,
         },
         {
             title: `${t.navbar.contact}`,
@@ -71,9 +71,10 @@ const Navbar = () => {
                 <ul style={{ color: `${textcolor}` }} className='hidden sm:flex  '>
                     {NavbarSections.map((section, index) => (
                         <li key={index} className='p-4 font-bold hover:text-sky-700'>
-                            <a href={`${section.path}`} translate='no'>
+                            {/* <a href={`${section.path}`} translate='no'>
                                 {section.title}
-                            </a>
+                            </a> */}
+                            <Link href={`${section.path}`} translate='no' >{section.title}</Link>
                         </li>
                     ))}
                 </ul>
