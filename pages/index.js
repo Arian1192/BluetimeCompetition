@@ -2,9 +2,8 @@ import React,{useContext} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Hero from '../components/Hero'
-import InstaGrid from '../components/InstaGrid'
+// import InstaGrid from '../components/InstaGrid'
 import dynamic from 'next/dynamic'
-import CardService from '../components/CardService'
 import About from './about'
 import { useRouter } from 'next/router'
 import englishLanguageTranslations from '../public/locales/en/common.json'
@@ -40,14 +39,13 @@ export default function Home({ data }) {
         <About />
         <div>
         </div>
-        <InstaGrid data={data} />
+        {/* <InstaGrid data={data} /> */}
       </div>
       <div id='services'>
         <div className='w-full  flex flex-col text-4xl items-center justify-center '>
           <h2 className='flex mt-40 items-center justify-center text-3xl font-extrabold text-slate-700 text-center max-sm:text-lg'>{t.serviceSection.title}</h2>
           <p className='m-10 text-slate-700 p-10 text-base text-center'>{t.serviceSection.firstParagraph}</p>
           <Services />
-          <CardService/>
           {typeof window !== 'undefined' && <DynamicSlider />}
         </div>
       </div>
@@ -55,19 +53,19 @@ export default function Home({ data }) {
   )
 }
 
-export async function getStaticProps() {
-  const res = await fetch(url)
-  const data = await res.json()
+// export async function getStaticProps() {
+//   const res = await fetch(url)
+//   const data = await res.json()
 
-  if(!data) {
-    return {
-      notFound: true,
-    }
-  }
+//   if(!data) {
+//     return {
+//       notFound: true,
+//     }
+//   }
 
-  return {
-    props: {
-      data,
-    },
-  }
-}
+//   return {
+//     props: {
+//       data,
+//     },
+//   }
+// }
