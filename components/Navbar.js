@@ -8,13 +8,14 @@ import frenchLanguageTranslations from '../public/locales/fr/common.json'
 import LanguageSelector from './languageSelector'
 import { LanguageContext } from '../Context/LanguageContext'
 import { useRouter } from 'next/router'
+import scrollToElement from 'scroll-to-element'
 
 
 
 
 const Navbar = () => {
     const router = useRouter()
-    const { locale, asPath, locales } = router
+    const { locale, locales } = router
     const es = spanishLanguageTranslations
     const en = englishLanguageTranslations
     const fr = frenchLanguageTranslations
@@ -29,11 +30,11 @@ const Navbar = () => {
         },
         {
             title: `${t.navbar.about}`,
-            path: `#about`,
+            path: `/${locale}/#about`,
         },
         {
             title: `${t.navbar.services}`,
-            path: `#services`,
+            path: `/${locale}/#services`,
         },
         {
             title: `${t.navbar.contact}`,
@@ -44,6 +45,20 @@ const Navbar = () => {
     const handleNav = () => {
         setNav(!nav)
     }
+
+    // const handleClick = (path) => {
+
+    //     if(path === '/'){
+    //         setNav(false)
+    //     }else{
+    //     scrollToElement(path, {
+    //         offset: 0,
+    //         ease: 'inOutQuad',
+    //         duration: 1000
+    //         })}
+
+    // }
+
 
     useEffect(() => {
         const changeColor = () => {
@@ -85,10 +100,8 @@ const Navbar = () => {
                     : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-blue-900 text-center ease-in duration-300 '}>
                     <ul>
                         {NavbarSections.map((section, index) => (
-                            <li key={index} className='p-4 text-4xl hover:text-gray-600' onClick={() => handleNav()}>
-                                <a href={`/${section.path}`}>
-                                    {section.title}
-                                </a>
+                            <li key={index} className='p-4 font-bold hover:text-slate-400 text-4xl '>
+                                <Link href={`${section.path}`} translate='no' >{section.title}</Link>
                             </li>
                         ))}
                     </ul>
